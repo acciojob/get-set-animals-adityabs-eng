@@ -1,40 +1,39 @@
 //complete this code
 class Animal {
-  private animalSpecies: string;
-
-  constructor(species: string) {
-    this.animalSpecies = species;
+	constructor(species) {
+	    this.animalSpecies = species;
   }
 
-  // getter
-  get species(): string {
+  get species(){
     return this.animalSpecies;
   }
 
-  makeSound(): void {
+  makeSound(){
     console.log(`The ${this.animalSpecies} makes a sound`);
   }
 }
 
-class Cat extends Animal {
-  constructor(species: string) {
+class Dog extends Animal {
+  constructor(species) {
     super(species);
   }
 
-  purr(): void {
+  bark() {
+    console.log("woof");
+  }
+}
+
+class Cat extends Animal {
+  constructor(species) {
+    super(species);
+  }
+
+  purr() {
     console.log("purr");
   }
 }
 
-class Dog extends Animal {
-  constructor(species: string) {
-    super(species);
-  }
 
-  bark(): void {
-    console.log("woof");
-  }
-}
 
 // Do not change the code below this line
 window.Animal = Animal;
